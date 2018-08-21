@@ -1,0 +1,144 @@
+.info-block {
+  background: url("../img/graphics.png") no-repeat 100% 0;
+  margin-bottom: 40px;
+}
+
+.banner{
+  padding: 151px 20px;
+  text-align: center;
+  margin-top: 65px;
+  &__description{
+    font-family: $robotoRegular;
+    font-size: 20px;
+    color: $textColor;
+    line-height: 1.3;
+    max-width: 80%;
+    letter-spacing: -0.77px;
+    margin: 0 auto 40px;
+  }
+}
+.btn-registry{
+  font-family: $robotoRegular;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+  color: $white;
+  background: $green;
+  box-shadow: 0px 19px 44px rgba(125, 130, 124, 0.567963);
+  border-radius: 27px;
+  padding: 10px 25px;
+  border: 2px solid $green;
+  @include transition();
+  &:hover{
+    background: $white;
+    color: $green;
+    border: 2px solid $green;
+  }
+}
+
+.info-cols{
+  &__title{
+    margin-bottom: 30px;
+  }
+  .info-item{
+    max-width: 75%;
+    margin: 0 auto 60px;
+    text-align: center;
+    &__image{
+      margin-bottom: 10px;
+      height: 52px;
+      &-icon{
+        max-width: 40px;
+      }
+    }
+    &__title{
+      font-family: $opensansBold;
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: -0.4px;
+      color: $titleColor;
+      margin-bottom: 15px;
+    }
+    &__text{
+      font-family: $opensansRegular;
+      font-size: 14px;
+      color: $black;
+      line-height: 1.4;
+      letter-spacing: -0.66px;
+    }
+  }
+}
+
+@media (min-width: $sm){
+  .info-cols {
+    .info-item {
+      max-width: none;
+      &__title{
+        min-height: 78px;
+      }
+    }
+  }
+}
+
+@media (min-width: $md){
+  .info-block {
+    margin-bottom: 140px;
+  }
+
+  .banner{
+    max-width: 70%;
+    padding: 177px 0 100px 50px;
+    text-align: left;
+    &__title{
+      text-align: left;
+    }
+    &__description{
+      font-size: 25px;
+      margin: 0 0 76px;
+      max-width: 75%;
+    }
+  }
+  .btn-registry{
+    font-size: 16px;
+    padding: 13px 42px;
+  }
+
+  .info-cols{
+    &__title{
+      margin-bottom: 45px;
+    }
+    .info-item{
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: left;
+      &__image{
+        &-icon{
+          max-width: 50px;
+        }
+      }
+      &__title{
+        font-size: 25px;
+        min-height: 90px;
+      }
+    }
+  }
+}
+@media (min-width: $lg){
+  .info-block {
+    background-position: 100% -35%;
+    margin-bottom: 128px;
+  }
+
+  .info-cols{
+    .info-item{
+      &__title{
+        min-height: 60px;
+      }
+    }
+  }
+
+  .banner{
+    max-width: 55%;
+    padding: 177px 0 103px 140px;
+  }
+}

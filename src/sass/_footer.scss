@@ -1,0 +1,97 @@
+.footer{
+  background: $textColor;
+  padding: 80px 0 50px;
+  position: relative;
+  font-family: $robotoRegular;
+  font-size: 14px;
+  letter-spacing: -0.496px;
+  line-height: 1.32;
+  color: $textColorWhite;
+  &__logo{
+    position: absolute;
+    top: 25px;
+    left: 15px;
+  }
+  &__title{
+    font-family: $robotoBlack;
+    font-size: 20px;
+    letter-spacing: -0.352px;
+    color: $textColorWhite;
+    margin-bottom: 10px;
+    &-right{
+      margin-bottom: 16px;
+    }
+  }
+  &__info{
+    margin-bottom: 12px;
+    &-right{
+      max-width: 80%;
+      margin-bottom: 19px;
+    }
+  }
+  &__link{
+    color: $textColorWhite;
+    position: relative;
+    white-space: nowrap;
+    &-bold{
+      font-family: $robotoBlack;
+    }
+    &:after{
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      background: $textColorWhite;
+
+    }
+    &:hover{
+      color: $textColorWhite;
+      &:after{
+        animation: 0.3s underline forwards;
+      }
+    }
+  }
+  &__list{
+    list-style: disc;
+    padding-left: 16px;
+    letter-spacing: -0.26px;
+    line-height: 1.32;
+    margin-bottom: 17px;
+  }
+}
+
+@media (min-width: $sm){
+  .footer{
+    &__logo{
+      top: 20px;
+      left: 20px;
+    }
+    &__info{
+      &-right{
+        margin: 0 0 19px;
+      }
+    }
+  }
+}
+
+@media (min-width: $md){
+  .footer{
+    padding: 47px 0;
+    font-size: 16px;
+    .row{
+      margin-left: 55px;
+    }
+    .col-md-6{
+      padding-left: 18px;
+    }
+    &__logo{
+      top: 35px;
+      left: 35px;
+    }
+    &__title{
+      font-size: 22px;
+    }
+  }
+}

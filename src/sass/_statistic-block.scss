@@ -1,0 +1,112 @@
+.statistic-block{
+  margin-bottom: 20px;
+  &__title{
+    margin-bottom: 30px;
+    margin-left: 18px;
+  }
+  &__row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 32px;
+  }
+  &__col{
+    display: flex;
+    flex-direction: column;
+  }
+  .statistic-item{
+    padding: 17px 20px 25px;
+    text-align: center;
+    border: 1px solid #E1E1E1;
+    border-radius: 3px;
+    min-width: 210px;
+    max-width: 250px;
+    margin: 0 auto 30px;
+    &__image{
+      height: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__number{
+      font-family: $robotoBlack;
+      font-weight: 900;
+      font-size: 28px;
+      letter-spacing: 0.36px;
+      color: $titleColor;
+      margin-bottom: 7px;
+    }
+    &__caption{
+      font-family: $robotoRegular;
+      font-size: 16px;
+      letter-spacing: -0.496px;
+      color: $textColor;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (min-width: $sm){
+  .statistic-block {
+    &__row {
+      flex-direction: row;
+    }
+    .statistic-item {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $md){
+  .statistic-block{
+    margin-bottom: 60px;
+    &__title{
+      margin-bottom: 40px;
+    }
+    &__row{
+      padding: 0;
+    }
+    &__col{
+      flex-direction: row;
+    }
+    .statistic-item{
+      padding: 17px 5px 25px;
+      height: 100%;
+      max-width: none;
+      width: auto;
+      min-width: 160px;
+      margin: 0 15px 0 0;
+      &__number {
+        font-size: 35px;
+      }
+      &__caption{
+        white-space: normal;
+      }
+    }
+  }
+}
+
+@media (min-width: $lg){
+  .statistic-block{
+    &__row{
+      padding-left: 30px;
+      padding-right: 32px;
+    }
+    .statistic-item{
+      padding: 17px 15px 25px;
+      margin: 0 35px 0 0;
+      &__caption{
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media (min-width: $xl){
+  .statistic-block{
+    .statistic-item{
+      padding: 17px 35px 25px;
+    }
+  }
+}

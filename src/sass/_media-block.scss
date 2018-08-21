@@ -1,0 +1,20 @@
+.media-block{
+  padding-bottom: 50px;
+  text-align: center;
+  position: relative;
+  &__title{
+    margin-bottom: 7px;
+  }
+  &__link{
+    display: inline-block;
+  }
+  &__image{
+    max-width: 200px;
+  }
+}
+
+@media (min-width: $md){
+  .media-block{
+    padding-bottom: 60px;
+  }
+}

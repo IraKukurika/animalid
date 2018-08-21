@@ -1,0 +1,16 @@
+.block-title{
+  font-family: $opensansBold;
+  font-size: 30px;
+  color: $titleColor;
+  font-weight: 700;
+  line-height: 1.37;
+  margin-bottom: 17px;
+  letter-spacing: -0.66px;
+  text-align: center;
+}
+
+@media (min-width: $md) {
+  .block-title {
+    font-size: 41px;
+  }
+}

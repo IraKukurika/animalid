@@ -1,0 +1,231 @@
+//Navbar
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 15px;
+  background: rgba(255,255,255,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  margin-top: 65px;
+
+  .navbar{
+    position: static;
+    &-toggler {
+      padding: 0;
+      height: 35px;
+      position: absolute;
+      top: -60%;
+      right: 25px;
+      z-index: 2;
+      &-icon {
+        display: block;
+        background-color: transparent;
+        opacity: 0.6;
+        width: 30px;
+        height: 3px;
+        position: relative;
+        &:before, &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          width: 30px;
+          height: 3px;
+          background: $textColor;
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+      }
+      &:hover {
+        .navbar-toggler-icon {
+          opacity: 1;
+        }
+      }
+      &.collapsed {
+        position: static;
+        top: auto;
+        right: 0;
+        .navbar-toggler-icon {
+          background: $textColor;
+          &:before {
+            transform: translateY(-9px) rotate(0);
+          }
+          &:after {
+            transform: translateY(9px) rotate(0);
+          }
+        }
+      }
+    }
+    &-collapse{
+      position: fixed;
+      z-index: 1;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    &-nav{
+      background: $white;
+      height: 100vh;
+      justify-content: center;
+    }
+  }
+  .nav-item{
+    padding: 24px 15px;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .nav-link{
+    font-family: $robotoRegular;
+    font-size: 16px;
+    color: $textColor;
+    letter-spacing: -0.26px;
+    position: relative;
+    padding: 5px 10px;
+    &:after{
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      background: $green;
+    }
+  }
+  .controls{
+    display: flex;
+    align-items: center;
+    .dropdown{
+      margin-right: 10px;
+      &:hover {
+        .dropdown-menu {
+          display: block;
+        }
+      }
+      &-menu{
+        box-shadow: 0px 4px 4px #EFEFEF;
+        padding: 0;
+        min-width: auto;
+        border-radius: 2px;
+        border: 0;
+        margin: 0;
+      }
+      &-toggle {
+        font-family: $robotoMedium;
+        font-size: 16px;
+        color: $textColor;
+        letter-spacing: -0.26px;
+        text-transform: uppercase;
+      }
+      &-item{
+        padding: 10px;
+        text-align: center;
+        background: $white;
+        border-bottom: 0.5px solid #E1E1E1;
+        &:last-child{
+          border-bottom: 0;
+        }
+        &:hover{
+          background: $green;
+          .dropdown-link{
+            color: $white;
+          }
+        }
+      }
+      &-link{
+        font-family: $robotoRegular;
+        font-size: 16px;
+        letter-spacing: -0.256px;
+        color: $textColor;
+      }
+    }
+  }
+  .btn-login{
+    font-family: $robotoBold;
+    letter-spacing: -0.26px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $green;
+    line-height: 1;
+    padding: 10px 20px;
+    background: $white;
+    border: 1px solid $green;
+    border-radius: 27px;
+    cursor: pointer;
+    @include transition(0.5s);
+    &:hover{
+      background: $green;
+      color: $white;
+    }
+  }
+}
+
+
+@media (min-width: $md) {
+  .nav {
+    padding: 0;
+    .navbar{
+      padding: 0;
+      &-collapse{
+        position: static;
+      }
+      &-nav{
+        background: transparent;
+        height: auto;
+      }
+    }
+    .nav-item{
+      padding: 20px 3px;
+      width: auto;
+      margin: 0;
+      text-align: left;
+    }
+    .nav-link{
+      &:hover{
+        &:after{
+          animation: 0.3s underline forwards;
+        }
+      }
+    }
+    .navbar-expand-md .navbar-nav .nav-link {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .controls {
+      margin-right: 5px;
+    }
+  }
+}
+
+
+@media (min-width: $lg) {
+  .nav {
+    .nav-item{
+      padding: 24px 15px;
+    }
+    .controls{
+      margin-right: 32px;
+      .dropdown{
+        margin-right: 40px;
+      }
+    }
+    .btn-login{
+      padding: 14px 31px;
+    }
+  }
+}
+
+@media (min-width: $xl) {
+  .nav {
+    .navbar-nav{
+      padding-left: 105px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+//breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+
+//fonts
+$robotoRegular: 'Roboto Regular', sans-serif;
+$robotoMedium: 'Roboto Medium', sans-serif;
+$robotoBold: 'Roboto Bold', sans-serif;
+$robotoBlack: 'Roboto Black', sans-serif;
+
+$opensansRegular: 'Opensans Regular', sans-serif;
+$opensansSemiBold: 'Opensans SemiBold', sans-serif;
+$opensansBold: 'Opensans Bold', sans-serif;
+
+//colors
+$white: #fff;
+$black: #000000;
+$textColor: #3B403A;
+$green: #61AF5B;
+$titleColor: #122F0B;
+$textColorWhite: #CFCFCF;
+
+//Mixins
+@mixin transition($s: 0.3s){
+  transition: all $s;
+}
+
+@keyframes underline {
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
